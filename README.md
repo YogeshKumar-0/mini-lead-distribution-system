@@ -1,6 +1,6 @@
 # Mini Lead Distribution System
 
-A production-ready full-stack lead distribution platform that intelligently assigns incoming leads to providers using mandatory allocation rules, round-robin balancing, quota enforcement, concurrency-safe operations, webhook idempotency, and real-time dashboard updates.
+A full-stack lead distribution platform that intelligently assigns incoming leads to providers using mandatory allocation rules, round-robin balancing, quota enforcement, concurrency-safe operations, webhook idempotency, and real-time dashboard updates.
 
 ## Live Demo
 
