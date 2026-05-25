@@ -20,7 +20,7 @@ export default function Home() {
 
   const fetchDashboard = async () => {
     try {
-      const res = await axios.get(`${API}/dashboard`);
+      const res = await axios.get(`${API}/api/dashboard`);
 
       setDashboard(res.data.dashboardData);
     } catch (error) {
@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     fetchDashboard();
 
-    const socket = io("http://localhost:5000");
+    const socket = io(API as string);
 
     socket.on("leadAssigned", () => {
       fetchDashboard();
@@ -57,7 +57,7 @@ export default function Home() {
     try {
       setLoading(true);
 
-      await axios.post(`${API}/leads/create`, formData);
+      await axios.post(`${API}/api/leads/create`, formData);
 
       alert("Lead Created Successfully");
 
